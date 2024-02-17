@@ -1,6 +1,6 @@
 //! A simple script to generate and verify the proof of a given program.
 
-use image::{GenericImageView, ImageFormat, RgbaImage};
+use image::{GenericImageView, ImageFormat, Pixel, RgbaImage};
 use lib::Transformation;
 use sp1_core::utils;
 use sp1_core::{SP1Prover, SP1Stdin, SP1Verifier};
@@ -36,11 +36,8 @@ fn main() {
     let new_height = proof.stdout.read::<u32>();
 
     println!("transformed_img_bug.len() = {:?}", transformed_img_buf.len());
-    let checked_len = Some(<P as Pixel>::CHANNEL_COUNT as usize)
-            .and_then(|size| size.checked_mul(width as usize))
-            .and_then(|size| size.checked_mul(height as usize));
-    println!("checked_len = {:?}", checked_len);
-    println!("map: {:?}", checked_len.map(|min_len| min_len <= len));
+    println!("new_width = {:?}", new_width);
+    println!("new_height = {:?}", new_height);
 
     let new_img = RgbaImage::from_raw(new_width, new_height, transformed_img_buf).unwrap();
     let fout = &mut File::create("./src/dog_cropped.jpg").unwrap(); // write cropped image
