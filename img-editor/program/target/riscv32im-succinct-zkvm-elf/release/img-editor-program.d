@@ -1,0 +1,1 @@
+/Users/sofiane/Documents/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/img-editor-program: /Users/sofiane/Documents/attested-img-editor/img-editor/lib/src/lib.rs /Users/sofiane/Documents/attested-img-editor/img-editor/program/src/main.rs

@@ -1,16 +1,13 @@
 // TODO: use turbojpeg for compression
 
-use image::{imageops, EncodableLayout, ImageBuffer, RgbImage};
+use image::{imageops, DynamicImage, GenericImageView, ImageBuffer, ImageFormat, Rgb, RgbaImage};
 use lib::Transformation;
+use std::io::Cursor;
 
 #[no_mangle]
 extern "C" fn round(x: f32) -> f32 {
-    let offset = x % 1.0f32;
-
-    if offset >= 0.5 {
-        return x + (1.0f32 - offset);
-    }
-    return x - offset;
+    let scale: f32 = 10_f32.powi(0);
+    (x * scale).round() / scale
 }
 
 #[no_mangle]
@@ -68,7 +65,12 @@ pub fn main() {
 
     // println!("{:?}", img_buf);
 
+    println!("Before reading image");
+    println!("width: {:?}", width);
+    println!("height: {:?}", height);
+    println!("img_buf.len(): {:?}", img_buf.len());
     let mut img: RgbImage = ImageBuffer::from_raw(width, height, img_buf).unwrap();
+    println!("Finished reading image");
 
     let cropped_img = imageops::crop(&mut img, 0, 0, 100, 100).to_image();
     let img_buffer = cropped_img.as_bytes();
