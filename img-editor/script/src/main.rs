@@ -18,7 +18,7 @@ fn main() {
     let decoded_transformations: Transformation = serde_json::from_str(data).unwrap();
 
     // how we get image: https://github.com/image-rs/image/blob/master/examples/opening.rs
-    let img = image::open("./src/dog-min.jpg").unwrap();
+    let img = image::open("./src/dog.jpg").unwrap(); // 128 x 84
     let (width, height) = img.dimensions();
     let img_buffer = img.into_bytes();
 
@@ -36,7 +36,7 @@ fn main() {
     let new_height = proof.stdout.read::<u32>();
 
     let new_img = RgbaImage::from_raw(new_width, new_height, transformed_img_buf).unwrap();
-    let fout = &mut File::create("./dog_cropped.png").unwrap(); // write cropped image
+    let fout = &mut File::create("./src/dog_cropped.jpg").unwrap(); // write cropped image
     new_img.write_to(fout, ImageFormat::Jpeg).unwrap();
 
     // Verify proof.
