@@ -1,1 +1,0 @@
-{"rustc":15193207150399759846,"features":"","target":0,"profile":0,"path":0,"deps":[[10618402922884942723,"build_script_build",false,5454748364757448407]],"local":[{"RerunIfChanged":{"output":"riscv32im-succinct-zkvm-elf/release/build/rayon-core-57cedadd65ff415e/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

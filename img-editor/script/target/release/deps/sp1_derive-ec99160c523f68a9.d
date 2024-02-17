@@ -1,5 +1,0 @@
-/Users/sofiane/Documents/attested-img-editor/img-editor/script/target/release/deps/libsp1_derive-ec99160c523f68a9.dylib: /Users/sofiane/.cargo/git/checkouts/sp1-20c98843a1ffc860/e19f742/derive/src/lib.rs
-
-/Users/sofiane/Documents/attested-img-editor/img-editor/script/target/release/deps/sp1_derive-ec99160c523f68a9.d: /Users/sofiane/.cargo/git/checkouts/sp1-20c98843a1ffc860/e19f742/derive/src/lib.rs
-
-/Users/sofiane/.cargo/git/checkouts/sp1-20c98843a1ffc860/e19f742/derive/src/lib.rs:
