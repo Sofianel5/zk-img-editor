@@ -22,5 +22,7 @@
         "img-editor/program/Cargo.toml",
         "img-editor/script/Cargo.toml",
     ],
-    "rust-analyzer.showUnlinkedFileNotification": false
+    "rust-analyzer.showUnlinkedFileNotification": false,
+    "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
+    "is_builtin": false
 }

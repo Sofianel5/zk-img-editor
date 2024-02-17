@@ -1,0 +1,267 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags:  
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -Aa 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_dda52/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_dda52.dir/build.make CMakeFiles/cmTC_dda52.dir/build
+Building C object CMakeFiles/cmTC_dda52.dir/CMakeCCompilerABI.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany    -v -MD -MT CMakeFiles/cmTC_dda52.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_dda52.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_dda52.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.24.3/share/cmake/Modules/CMakeCCompilerABI.c
+Apple clang version 14.0.0 (clang-1400.0.29.102)
+Target: arm64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_dda52.dir/CMakeCCompilerABI.c.obj] Error 1
+make: *** [cmTC_dda52/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5f23f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5f23f.dir/build.make CMakeFiles/cmTC_5f23f.dir/build
+Building C object CMakeFiles/cmTC_5f23f.dir/testCCompiler.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany  -MD -MT CMakeFiles/cmTC_5f23f.dir/testCCompiler.c.obj -MF CMakeFiles/cmTC_5f23f.dir/testCCompiler.c.obj.d -o CMakeFiles/cmTC_5f23f.dir/testCCompiler.c.obj -c /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp/testCCompiler.c
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_5f23f.dir/testCCompiler.c.obj] Error 1
+make: *** [cmTC_5f23f/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags:  
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -Aa 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e67e9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e67e9.dir/build.make CMakeFiles/cmTC_e67e9.dir/build
+Building C object CMakeFiles/cmTC_e67e9.dir/CMakeCCompilerABI.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany    -v -MD -MT CMakeFiles/cmTC_e67e9.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_e67e9.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_e67e9.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.24.3/share/cmake/Modules/CMakeCCompilerABI.c
+Apple clang version 14.0.0 (clang-1400.0.29.102)
+Target: arm64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_e67e9.dir/CMakeCCompilerABI.c.obj] Error 1
+make: *** [cmTC_e67e9/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d3c9a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d3c9a.dir/build.make CMakeFiles/cmTC_d3c9a.dir/build
+Building C object CMakeFiles/cmTC_d3c9a.dir/testCCompiler.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany  -MD -MT CMakeFiles/cmTC_d3c9a.dir/testCCompiler.c.obj -MF CMakeFiles/cmTC_d3c9a.dir/testCCompiler.c.obj.d -o CMakeFiles/cmTC_d3c9a.dir/testCCompiler.c.obj -c /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp/testCCompiler.c
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_d3c9a.dir/testCCompiler.c.obj] Error 1
+make: *** [cmTC_d3c9a/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags:  
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -Aa 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: ;-ffunction-sections;-fdata-sections;-fPIC;-march=rv32im;-mabi=ilp32;-mcmodel=medany
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+clang: error: the clang compiler does not support '-march=rv32im'
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_60dde/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_60dde.dir/build.make CMakeFiles/cmTC_60dde.dir/build
+Building C object CMakeFiles/cmTC_60dde.dir/CMakeCCompilerABI.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany    -v -MD -MT CMakeFiles/cmTC_60dde.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_60dde.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_60dde.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.24.3/share/cmake/Modules/CMakeCCompilerABI.c
+Apple clang version 14.0.0 (clang-1400.0.29.102)
+Target: arm64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_60dde.dir/CMakeCCompilerABI.c.obj] Error 1
+make: *** [cmTC_60dde/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f58c9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f58c9.dir/build.make CMakeFiles/cmTC_f58c9.dir/build
+Building C object CMakeFiles/cmTC_f58c9.dir/testCCompiler.c.obj
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -march=rv32im -mabi=ilp32 -mcmodel=medany  -MD -MT CMakeFiles/cmTC_f58c9.dir/testCCompiler.c.obj -MF CMakeFiles/cmTC_f58c9.dir/testCCompiler.c.obj.d -o CMakeFiles/cmTC_f58c9.dir/testCCompiler.c.obj -c /Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/CMakeTmp/testCCompiler.c
+clang: error: the clang compiler does not support '-march=rv32im'
+make[1]: *** [CMakeFiles/cmTC_f58c9.dir/testCCompiler.c.obj] Error 1
+make: *** [cmTC_f58c9/fast] Error 2
+
+
+

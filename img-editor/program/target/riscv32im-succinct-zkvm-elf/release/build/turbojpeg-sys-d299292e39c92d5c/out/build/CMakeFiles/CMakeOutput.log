@@ -1,0 +1,41 @@
+The target system is: zkvm -  - riscv32
+The host system is: Darwin - 21.6.0 - arm64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/3.24.3/CompilerIdC/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/3.24.3/CompilerIdC/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/build/turbojpeg-sys-d299292e39c92d5c/out/build/CMakeFiles/3.24.3/CompilerIdC/a.out"
+

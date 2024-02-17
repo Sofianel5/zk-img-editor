@@ -1,0 +1,10 @@
+/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/deps/libthiserror-4452e0494d0af6a7.rmeta: /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/lib.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/aserror.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/display.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/provide.rs
+
+/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/deps/libthiserror-4452e0494d0af6a7.rlib: /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/lib.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/aserror.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/display.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/provide.rs
+
+/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/deps/thiserror-4452e0494d0af6a7.d: /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/lib.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/aserror.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/display.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/provide.rs
+
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/lib.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/aserror.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/display.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thiserror-1.0.57/src/provide.rs:

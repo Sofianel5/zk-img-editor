@@ -15,3 +15,5 @@ pub enum Transformation {
     Crop(CropParameters),
     BlackAndWhite(),
 }
+
+

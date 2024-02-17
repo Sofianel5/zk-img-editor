@@ -1,0 +1,401 @@
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_TURBOJPEG_STATIC
+AARCH64_APPLE_DARWIN_TURBOJPEG_STATIC unset
+cargo:rerun-if-env-changed=TURBOJPEG_STATIC
+TURBOJPEG_STATIC unset
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_TURBOJPEG_DYNAMIC
+AARCH64_APPLE_DARWIN_TURBOJPEG_DYNAMIC unset
+cargo:rerun-if-env-changed=TURBOJPEG_DYNAMIC
+TURBOJPEG_DYNAMIC unset
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_TURBOJPEG_SHARED
+AARCH64_APPLE_DARWIN_TURBOJPEG_SHARED unset
+cargo:rerun-if-env-changed=TURBOJPEG_SHARED
+TURBOJPEG_SHARED unset
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_TURBOJPEG_SOURCE
+AARCH64_APPLE_DARWIN_TURBOJPEG_SOURCE unset
+cargo:rerun-if-env-changed=TURBOJPEG_SOURCE
+TURBOJPEG_SOURCE unset
+Building turbojpeg from source
+CMAKE_TOOLCHAIN_FILE_aarch64-apple-darwin = None
+CMAKE_TOOLCHAIN_FILE_aarch64_apple_darwin = None
+HOST_CMAKE_TOOLCHAIN_FILE = None
+CMAKE_TOOLCHAIN_FILE = None
+CMAKE_GENERATOR_aarch64-apple-darwin = None
+CMAKE_GENERATOR_aarch64_apple_darwin = None
+HOST_CMAKE_GENERATOR = None
+CMAKE_GENERATOR = None
+CMAKE_PREFIX_PATH_aarch64-apple-darwin = None
+CMAKE_PREFIX_PATH_aarch64_apple_darwin = None
+HOST_CMAKE_PREFIX_PATH = None
+CMAKE_PREFIX_PATH = None
+CMAKE_aarch64-apple-darwin = None
+CMAKE_aarch64_apple_darwin = None
+HOST_CMAKE = None
+CMAKE = None
+running: cd "/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/build" && CMAKE_PREFIX_PATH="" "cmake" "/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/turbojpeg-sys-1.0.0/libjpeg-turbo" "-DCMAKE_OSX_ARCHITECTURES=arm64" "-DCMAKE_INSTALL_DEFAULT_LIBDIR=lib" "-DCMAKE_INSTALL_PREFIX=/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out" "-DCMAKE_C_FLAGS= -ffunction-sections -fdata-sections -fPIC -arch arm64" "-DCMAKE_C_COMPILER=/usr/bin/cc" "-DCMAKE_CXX_FLAGS= -ffunction-sections -fdata-sections -fPIC -arch arm64" "-DCMAKE_CXX_COMPILER=/usr/bin/c++" "-DCMAKE_ASM_FLAGS= -ffunction-sections -fdata-sections -fPIC -arch arm64" "-DCMAKE_ASM_COMPILER=/usr/bin/cc" "-DCMAKE_BUILD_TYPE=Release" "-DENABLE_SHARED=0" "-DENABLE_STATIC=1" "-DREQUIRE_SIMD=ON"
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_BUILD_TYPE = Release
+-- VERSION = 3.0.1, BUILD = 20240217
+-- 64-bit build (arm64)
+-- CMAKE_INSTALL_PREFIX = /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out
+-- CMAKE_INSTALL_BINDIR = bin (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin)
+-- CMAKE_INSTALL_DATAROOTDIR = share (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share)
+-- CMAKE_INSTALL_DOCDIR = share/doc/libjpeg-turbo (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo)
+-- CMAKE_INSTALL_INCLUDEDIR = include (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include)
+-- CMAKE_INSTALL_LIBDIR = lib (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib)
+-- CMAKE_INSTALL_MANDIR = share/man (/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man)
+-- Shared libraries disabled (ENABLE_SHARED = 0)
+-- Static libraries enabled (ENABLE_STATIC = 1)
+-- Arithmetic decoding support enabled (WITH_ARITH_DEC = 1)
+-- Arithmetic encoding support enabled (WITH_ARITH_ENC = 1)
+-- TurboJPEG API library enabled (WITH_TURBOJPEG = 1)
+-- TurboJPEG Java wrapper disabled (WITH_JAVA = 0)
+-- Emulating libjpeg API/ABI v6.2 (WITH_JPEG7 = 0, WITH_JPEG8 = 0)
+-- libjpeg API shared library version = 62.4.0
+-- Compiler flags =  -ffunction-sections -fdata-sections -fPIC -arch arm64 -O3 -DNDEBUG
+-- Linker flags =  
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED - Failed
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Performing Test HAVE_VLD1_S16_X3
+-- Performing Test HAVE_VLD1_S16_X3 - Success
+-- Performing Test HAVE_VLD1_U16_X2
+-- Performing Test HAVE_VLD1_U16_X2 - Success
+-- Performing Test HAVE_VLD1Q_U8_X4
+-- Performing Test HAVE_VLD1Q_U8_X4 - Success
+-- Use full Neon SIMD intrinsics implementation (NEON_INTRINSICS = ON)
+-- SIMD extensions: arm64 (WITH_SIMD = 1)
+-- FLOATTEST8 = fp-contract
+-- FLOATTEST12 = fp-contract
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/build
+running: cd "/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/build" && MAKEFLAGS="-j --jobserver-fds=7,8 --jobserver-auth=7,8" "cmake" "--build" "." "--target" "install" "--config" "Release"
+[  1%] Building C object CMakeFiles/jpeg16-static.dir/jcapistd.c.o
+[  1%] Building C object CMakeFiles/turbojpeg16-static.dir/rdppm.c.o
+[  1%] Building C object CMakeFiles/turbojpeg12-static.dir/rdppm.c.o
+[  1%] Building C object CMakeFiles/jpeg12-static.dir/jcapistd.c.o
+[  1%] Building C object CMakeFiles/cjpeg12-static.dir/rdgif.c.o
+[  2%] Building C object simd/CMakeFiles/simd.dir/arm/jcgray-neon.c.o
+[  2%] Building C object CMakeFiles/cjpeg16-static.dir/rdgif.c.o
+[  3%] Building C object CMakeFiles/djpeg12-static.dir/rdcolmap.c.o
+[  3%] Building C object CMakeFiles/jpeg16-static.dir/jccolor.c.o
+[  3%] Building C object CMakeFiles/jpeg12-static.dir/jccolor.c.o
+[  3%] Building C object CMakeFiles/djpeg12-static.dir/wrgif.c.o
+[  4%] Building C object CMakeFiles/cjpeg12-static.dir/rdppm.c.o
+[  5%] Building C object CMakeFiles/cjpeg16-static.dir/rdppm.c.o
+[  5%] Building C object simd/CMakeFiles/simd.dir/arm/jcphuff-neon.c.o
+[  6%] Building C object CMakeFiles/turbojpeg16-static.dir/wrppm.c.o
+[  7%] Building C object CMakeFiles/turbojpeg12-static.dir/wrppm.c.o
+[  8%] Building C object CMakeFiles/djpeg12-static.dir/wrppm.c.o
+[  9%] Building C object CMakeFiles/jpeg16-static.dir/jcdiffct.c.o
+[  9%] Built target turbojpeg16-static
+[  9%] Built target turbojpeg12-static
+[ 10%] Building C object CMakeFiles/jpeg12-static.dir/jcdiffct.c.o
+[ 11%] Building C object simd/CMakeFiles/simd.dir/arm/jcsample-neon.c.o
+[ 11%] Built target cjpeg12-static
+[ 11%] Building C object CMakeFiles/jpeg16-static.dir/jclossls.c.o
+[ 11%] Built target cjpeg16-static
+[ 12%] Building C object CMakeFiles/jpeg16-static.dir/jcmainct.c.o
+[ 12%] Building C object CMakeFiles/djpeg16-static.dir/wrppm.c.o
+[ 12%] Building C object simd/CMakeFiles/simd.dir/arm/jdmerge-neon.c.o
+[ 13%] Building C object simd/CMakeFiles/simd.dir/arm/jdsample-neon.c.o
+[ 13%] Built target djpeg12-static
+[ 13%] Building C object CMakeFiles/rdjpgcom.dir/rdjpgcom.c.o
+[ 13%] Building C object CMakeFiles/jpeg12-static.dir/jclossls.c.o
+[ 13%] Built target djpeg16-static
+[ 13%] Building C object CMakeFiles/jpeg16-static.dir/jcprepct.c.o
+[ 13%] Building C object simd/CMakeFiles/simd.dir/arm/jfdctfst-neon.c.o
+[ 13%] Building C object CMakeFiles/jpeg16-static.dir/jcsample.c.o
+[ 14%] Building C object CMakeFiles/jpeg12-static.dir/jcmainct.c.o
+[ 14%] Linking C executable rdjpgcom
+[ 14%] Building C object CMakeFiles/wrjpgcom.dir/wrjpgcom.c.o
+[ 14%] Building C object simd/CMakeFiles/simd.dir/arm/jidctred-neon.c.o
+[ 14%] Building C object CMakeFiles/jpeg12-static.dir/jcprepct.c.o
+[ 15%] Building C object simd/CMakeFiles/simd.dir/arm/jquanti-neon.c.o
+[ 15%] Built target rdjpgcom
+[ 15%] Building C object CMakeFiles/strtest.dir/strtest.c.o
+[ 16%] Building C object CMakeFiles/jpeg16-static.dir/jdapistd.c.o
+[ 17%] Linking C executable wrjpgcom
+[ 17%] Building C object simd/CMakeFiles/simd.dir/arm/jccolor-neon.c.o
+[ 17%] Building C object CMakeFiles/jpeg12-static.dir/jcsample.c.o
+[ 17%] Building C object CMakeFiles/jpeg16-static.dir/jdcolor.c.o
+[ 18%] Linking C executable strtest
+[ 18%] Building C object md5/CMakeFiles/md5cmp.dir/md5cmp.c.o
+[ 19%] Building C object simd/CMakeFiles/simd.dir/arm/jidctint-neon.c.o
+[ 19%] Built target wrjpgcom
+[ 19%] Building C object simd/CMakeFiles/simd.dir/arm/jidctfst-neon.c.o
+[ 20%] Building C object CMakeFiles/jpeg16-static.dir/jddiffct.c.o
+[ 20%] Built target strtest
+[ 21%] Building C object md5/CMakeFiles/md5cmp.dir/md5.c.o
+[ 22%] Building C object CMakeFiles/jpeg12-static.dir/jdapistd.c.o
+[ 22%] Building C object simd/CMakeFiles/simd.dir/arm/aarch64/jchuff-neon.c.o
+[ 22%] Building C object md5/CMakeFiles/md5cmp.dir/md5hl.c.o
+[ 22%] Building C object CMakeFiles/jpeg12-static.dir/jdcolor.c.o
+[ 22%] Building C object CMakeFiles/jpeg16-static.dir/jdlossls.c.o
+[ 23%] Building C object CMakeFiles/jpeg12-static.dir/jddiffct.c.o
+[ 24%] Linking C executable md5cmp
+[ 25%] Building C object simd/CMakeFiles/simd.dir/arm/jdcolor-neon.c.o
+[ 25%] Building C object CMakeFiles/jpeg12-static.dir/jdlossls.c.o
+[ 26%] Building C object CMakeFiles/jpeg12-static.dir/jdmainct.c.o
+[ 26%] Building C object CMakeFiles/jpeg16-static.dir/jdmainct.c.o
+[ 26%] Built target md5cmp
+[ 26%] Building C object simd/CMakeFiles/simd.dir/arm/jfdctint-neon.c.o
+[ 26%] Building C object CMakeFiles/jpeg12-static.dir/jdpostct.c.o
+[ 26%] Building C object CMakeFiles/jpeg12-static.dir/jdsample.c.o
+[ 27%] Building C object CMakeFiles/jpeg12-static.dir/jutils.c.o
+[ 27%] Building C object CMakeFiles/jpeg12-static.dir/jccoefct.c.o
+[ 28%] Building C object simd/CMakeFiles/simd.dir/arm/aarch64/jsimd.c.o
+[ 29%] Building C object CMakeFiles/jpeg16-static.dir/jdpostct.c.o
+[ 30%] Building C object CMakeFiles/jpeg12-static.dir/jcdctmgr.c.o
+[ 30%] Building C object CMakeFiles/jpeg16-static.dir/jdsample.c.o
+[ 30%] Building C object CMakeFiles/jpeg12-static.dir/jdcoefct.c.o
+[ 31%] Building C object CMakeFiles/jpeg16-static.dir/jutils.c.o
+[ 32%] Building C object CMakeFiles/jpeg12-static.dir/jddctmgr.c.o
+[ 32%] Built target simd
+[ 32%] Building C object CMakeFiles/jpeg12-static.dir/jdmerge.c.o
+[ 32%] Building C object CMakeFiles/jpeg12-static.dir/jfdctfst.c.o
+[ 33%] Building C object CMakeFiles/jpeg12-static.dir/jfdctint.c.o
+[ 33%] Building C object CMakeFiles/jpeg12-static.dir/jidctflt.c.o
+[ 33%] Built target jpeg16-static
+[ 34%] Building C object CMakeFiles/jpeg12-static.dir/jidctfst.c.o
+[ 34%] Building C object CMakeFiles/jpeg12-static.dir/jidctint.c.o
+[ 35%] Building C object CMakeFiles/jpeg12-static.dir/jidctred.c.o
+[ 35%] Building C object CMakeFiles/jpeg12-static.dir/jquant1.c.o
+[ 35%] Building C object CMakeFiles/jpeg12-static.dir/jquant2.c.o
+[ 35%] Built target jpeg12-static
+[ 35%] Building C object CMakeFiles/turbojpeg-static.dir/jcdiffct.c.o
+[ 36%] Building C object CMakeFiles/turbojpeg-static.dir/jccolor.c.o
+[ 36%] Building C object CMakeFiles/turbojpeg-static.dir/jcapistd.c.o
+[ 36%] Building C object CMakeFiles/jpeg-static.dir/jcapistd.c.o
+[ 36%] Building C object CMakeFiles/turbojpeg-static.dir/jcmainct.c.o
+[ 37%] Building C object CMakeFiles/turbojpeg-static.dir/jclossls.c.o
+[ 37%] Building C object CMakeFiles/jpeg-static.dir/jcdiffct.c.o
+[ 38%] Building C object CMakeFiles/jpeg-static.dir/jccolor.c.o
+[ 39%] Building C object CMakeFiles/turbojpeg-static.dir/jcprepct.c.o
+[ 40%] Building C object CMakeFiles/jpeg-static.dir/jclossls.c.o
+[ 40%] Building C object CMakeFiles/turbojpeg-static.dir/jcsample.c.o
+[ 40%] Building C object CMakeFiles/jpeg-static.dir/jcmainct.c.o
+[ 40%] Building C object CMakeFiles/turbojpeg-static.dir/jdapistd.c.o
+[ 41%] Building C object CMakeFiles/turbojpeg-static.dir/jdcolor.c.o
+[ 41%] Building C object CMakeFiles/jpeg-static.dir/jcprepct.c.o
+[ 41%] Building C object CMakeFiles/turbojpeg-static.dir/jddiffct.c.o
+[ 42%] Building C object CMakeFiles/jpeg-static.dir/jcsample.c.o
+[ 43%] Building C object CMakeFiles/turbojpeg-static.dir/jdlossls.c.o
+[ 43%] Building C object CMakeFiles/turbojpeg-static.dir/jdmainct.c.o
+[ 44%] Building C object CMakeFiles/turbojpeg-static.dir/jdpostct.c.o
+[ 44%] Building C object CMakeFiles/jpeg-static.dir/jdapistd.c.o
+[ 44%] Building C object CMakeFiles/turbojpeg-static.dir/jdsample.c.o
+[ 44%] Building C object CMakeFiles/turbojpeg-static.dir/jutils.c.o
+[ 45%] Building C object CMakeFiles/turbojpeg-static.dir/jccoefct.c.o
+[ 46%] Building C object CMakeFiles/jpeg-static.dir/jdcolor.c.o
+[ 46%] Building C object CMakeFiles/turbojpeg-static.dir/jcdctmgr.c.o
+[ 46%] Building C object CMakeFiles/jpeg-static.dir/jddiffct.c.o
+[ 47%] Building C object CMakeFiles/turbojpeg-static.dir/jdcoefct.c.o
+[ 48%] Building C object CMakeFiles/jpeg-static.dir/jdlossls.c.o
+[ 48%] Building C object CMakeFiles/turbojpeg-static.dir/jddctmgr.c.o
+[ 48%] Building C object CMakeFiles/jpeg-static.dir/jdmainct.c.o
+[ 48%] Building C object CMakeFiles/turbojpeg-static.dir/jdmerge.c.o
+[ 48%] Building C object CMakeFiles/jpeg-static.dir/jdpostct.c.o
+[ 49%] Building C object CMakeFiles/turbojpeg-static.dir/jfdctfst.c.o
+[ 49%] Building C object CMakeFiles/turbojpeg-static.dir/jfdctint.c.o
+[ 50%] Building C object CMakeFiles/jpeg-static.dir/jdsample.c.o
+[ 51%] Building C object CMakeFiles/turbojpeg-static.dir/jidctflt.c.o
+[ 51%] Building C object CMakeFiles/turbojpeg-static.dir/jidctfst.c.o
+[ 51%] Building C object CMakeFiles/jpeg-static.dir/jutils.c.o
+[ 52%] Building C object CMakeFiles/turbojpeg-static.dir/jidctint.c.o
+[ 52%] Building C object CMakeFiles/turbojpeg-static.dir/jidctred.c.o
+[ 52%] Building C object CMakeFiles/turbojpeg-static.dir/jquant1.c.o
+[ 53%] Building C object CMakeFiles/jpeg-static.dir/jccoefct.c.o
+[ 54%] Building C object CMakeFiles/turbojpeg-static.dir/jquant2.c.o
+[ 54%] Building C object CMakeFiles/turbojpeg-static.dir/jcapimin.c.o
+[ 54%] Building C object CMakeFiles/jpeg-static.dir/jcdctmgr.c.o
+[ 55%] Building C object CMakeFiles/turbojpeg-static.dir/jchuff.c.o
+[ 55%] Building C object CMakeFiles/turbojpeg-static.dir/jcicc.c.o
+[ 56%] Building C object CMakeFiles/jpeg-static.dir/jdcoefct.c.o
+[ 56%] Building C object CMakeFiles/jpeg-static.dir/jddctmgr.c.o
+[ 57%] Building C object CMakeFiles/turbojpeg-static.dir/jcinit.c.o
+[ 57%] Building C object CMakeFiles/turbojpeg-static.dir/jclhuff.c.o
+[ 57%] Building C object CMakeFiles/jpeg-static.dir/jdmerge.c.o
+[ 57%] Building C object CMakeFiles/turbojpeg-static.dir/jcmarker.c.o
+[ 58%] Building C object CMakeFiles/jpeg-static.dir/jfdctfst.c.o
+[ 59%] Building C object CMakeFiles/turbojpeg-static.dir/jcmaster.c.o
+[ 59%] Building C object CMakeFiles/jpeg-static.dir/jfdctint.c.o
+[ 59%] Building C object CMakeFiles/turbojpeg-static.dir/jcomapi.c.o
+[ 60%] Building C object CMakeFiles/jpeg-static.dir/jidctflt.c.o
+[ 61%] Building C object CMakeFiles/turbojpeg-static.dir/jcparam.c.o
+[ 61%] Building C object CMakeFiles/turbojpeg-static.dir/jcphuff.c.o
+[ 62%] Building C object CMakeFiles/jpeg-static.dir/jidctfst.c.o
+[ 62%] Building C object CMakeFiles/jpeg-static.dir/jidctint.c.o
+[ 62%] Building C object CMakeFiles/jpeg-static.dir/jidctred.c.o
+[ 63%] Building C object CMakeFiles/turbojpeg-static.dir/jctrans.c.o
+[ 63%] Building C object CMakeFiles/jpeg-static.dir/jquant1.c.o
+[ 64%] Building C object CMakeFiles/jpeg-static.dir/jquant2.c.o
+[ 64%] Building C object CMakeFiles/jpeg-static.dir/jcapimin.c.o
+[ 64%] Building C object CMakeFiles/turbojpeg-static.dir/jdapimin.c.o
+[ 64%] Building C object CMakeFiles/turbojpeg-static.dir/jdatadst.c.o
+[ 65%] Building C object CMakeFiles/turbojpeg-static.dir/jdatasrc.c.o
+[ 66%] Building C object CMakeFiles/jpeg-static.dir/jchuff.c.o
+[ 67%] Building C object CMakeFiles/turbojpeg-static.dir/jdicc.c.o
+[ 67%] Building C object CMakeFiles/turbojpeg-static.dir/jdhuff.c.o
+[ 67%] Building C object CMakeFiles/turbojpeg-static.dir/jdinput.c.o
+[ 67%] Building C object CMakeFiles/turbojpeg-static.dir/jdlhuff.c.o
+[ 67%] Building C object CMakeFiles/jpeg-static.dir/jcicc.c.o
+[ 68%] Building C object CMakeFiles/turbojpeg-static.dir/jdmarker.c.o
+[ 68%] Building C object CMakeFiles/turbojpeg-static.dir/jdmaster.c.o
+[ 69%] Building C object CMakeFiles/jpeg-static.dir/jcinit.c.o
+[ 69%] Building C object CMakeFiles/jpeg-static.dir/jclhuff.c.o
+[ 70%] Building C object CMakeFiles/turbojpeg-static.dir/jdphuff.c.o
+[ 70%] Building C object CMakeFiles/jpeg-static.dir/jcmarker.c.o
+[ 71%] Building C object CMakeFiles/turbojpeg-static.dir/jerror.c.o
+[ 71%] Building C object CMakeFiles/turbojpeg-static.dir/jdtrans.c.o
+[ 72%] Building C object CMakeFiles/jpeg-static.dir/jcmaster.c.o
+[ 72%] Building C object CMakeFiles/jpeg-static.dir/jcomapi.c.o
+[ 73%] Building C object CMakeFiles/jpeg-static.dir/jcparam.c.o
+[ 73%] Building C object CMakeFiles/jpeg-static.dir/jcphuff.c.o
+[ 73%] Building C object CMakeFiles/jpeg-static.dir/jctrans.c.o
+[ 73%] Building C object CMakeFiles/turbojpeg-static.dir/jfdctflt.c.o
+[ 74%] Building C object CMakeFiles/jpeg-static.dir/jdapimin.c.o
+[ 74%] Building C object CMakeFiles/jpeg-static.dir/jdatadst.c.o
+[ 74%] Building C object CMakeFiles/turbojpeg-static.dir/jmemmgr.c.o
+[ 75%] Building C object CMakeFiles/jpeg-static.dir/jdatasrc.c.o
+[ 75%] Building C object CMakeFiles/jpeg-static.dir/jdhuff.c.o
+[ 76%] Building C object CMakeFiles/jpeg-static.dir/jdicc.c.o
+[ 76%] Building C object CMakeFiles/jpeg-static.dir/jdinput.c.o
+[ 77%] Building C object CMakeFiles/turbojpeg-static.dir/jmemnobs.c.o
+[ 77%] Building C object CMakeFiles/jpeg-static.dir/jdlhuff.c.o
+[ 77%] Building C object CMakeFiles/turbojpeg-static.dir/jaricom.c.o
+[ 78%] Building C object CMakeFiles/turbojpeg-static.dir/jcarith.c.o
+[ 78%] Building C object CMakeFiles/turbojpeg-static.dir/jdarith.c.o
+[ 79%] Building C object CMakeFiles/jpeg-static.dir/jdmarker.c.o
+[ 80%] Building C object CMakeFiles/turbojpeg-static.dir/turbojpeg.c.o
+[ 80%] Building C object CMakeFiles/jpeg-static.dir/jdmaster.c.o
+[ 80%] Building C object CMakeFiles/turbojpeg-static.dir/transupp.c.o
+[ 81%] Building C object CMakeFiles/jpeg-static.dir/jdphuff.c.o
+[ 81%] Building C object CMakeFiles/turbojpeg-static.dir/jdatadst-tj.c.o
+[ 81%] Building C object CMakeFiles/jpeg-static.dir/jdtrans.c.o
+[ 82%] Building C object CMakeFiles/jpeg-static.dir/jerror.c.o
+[ 83%] Building C object CMakeFiles/turbojpeg-static.dir/jdatasrc-tj.c.o
+[ 83%] Building C object CMakeFiles/turbojpeg-static.dir/rdbmp.c.o
+[ 84%] Building C object CMakeFiles/turbojpeg-static.dir/rdppm.c.o
+[ 84%] Building C object CMakeFiles/jpeg-static.dir/jfdctflt.c.o
+[ 84%] Building C object CMakeFiles/turbojpeg-static.dir/wrbmp.c.o
+[ 84%] Building C object CMakeFiles/jpeg-static.dir/jmemmgr.c.o
+[ 85%] Building C object CMakeFiles/jpeg-static.dir/jmemnobs.c.o
+[ 86%] Building C object CMakeFiles/jpeg-static.dir/jaricom.c.o
+[ 86%] Building C object CMakeFiles/turbojpeg-static.dir/wrppm.c.o
+[ 87%] Building C object CMakeFiles/jpeg-static.dir/jcarith.c.o
+[ 87%] Building C object CMakeFiles/jpeg-static.dir/jdarith.c.o
+[ 88%] Linking C static library libjpeg.a
+[ 88%] Built target jpeg-static
+[ 89%] Building C object CMakeFiles/example-static.dir/example.c.o
+[ 89%] Building C object CMakeFiles/cjpeg-static.dir/cdjpeg.c.o
+[ 89%] Building C object CMakeFiles/cjpeg-static.dir/cjpeg.c.o
+[ 90%] Building C object CMakeFiles/cjpeg-static.dir/rdgif.c.o
+[ 90%] Building C object CMakeFiles/djpeg-static.dir/djpeg.c.o
+[ 90%] Building C object CMakeFiles/cjpeg-static.dir/rdbmp.c.o
+[ 90%] Building C object CMakeFiles/jpegtran-static.dir/jpegtran.c.o
+[ 90%] Linking C static library libturbojpeg.a
+[ 91%] Building C object CMakeFiles/cjpeg-static.dir/rdppm.c.o
+[ 91%] Linking C executable example-static
+[ 91%] Building C object CMakeFiles/cjpeg-static.dir/rdswitch.c.o
+[ 92%] Building C object CMakeFiles/jpegtran-static.dir/cdjpeg.c.o
+[ 92%] Building C object CMakeFiles/cjpeg-static.dir/rdtarga.c.o
+[ 92%] Building C object CMakeFiles/djpeg-static.dir/cdjpeg.c.o
+[ 92%] Built target turbojpeg-static
+[ 92%] Built target example-static
+[ 92%] Building C object CMakeFiles/tjunittest-static.dir/tjunittest.c.o
+[ 93%] Building C object CMakeFiles/djpeg-static.dir/rdcolmap.c.o
+[ 93%] Building C object CMakeFiles/jpegtran-static.dir/rdswitch.c.o
+[ 93%] Building C object CMakeFiles/tjbench-static.dir/tjbench.c.o
+[ 94%] Building C object CMakeFiles/tjunittest-static.dir/tjutil.c.o
+[ 94%] Building C object CMakeFiles/djpeg-static.dir/rdswitch.c.o
+[ 94%] Building C object CMakeFiles/tjbench-static.dir/tjutil.c.o
+[ 94%] Building C object CMakeFiles/jpegtran-static.dir/transupp.c.o
+[ 94%] Building C object CMakeFiles/tjunittest-static.dir/md5/md5.c.o
+[ 95%] Building C object CMakeFiles/djpeg-static.dir/wrbmp.c.o
+[ 96%] Linking C executable cjpeg-static
+[ 97%] Building C object CMakeFiles/tjunittest-static.dir/md5/md5hl.c.o
+[ 97%] Building C object CMakeFiles/djpeg-static.dir/wrgif.c.o
+[ 98%] Building C object CMakeFiles/djpeg-static.dir/wrppm.c.o
+[ 98%] Built target cjpeg-static
+[ 98%] Building C object CMakeFiles/djpeg-static.dir/wrtarga.c.o
+[ 98%] Linking C executable djpeg-static
+[ 98%] Built target djpeg-static
+[ 99%] Linking C executable tjbench-static
+[ 99%] Linking C executable tjunittest-static
+[ 99%] Built target tjunittest-static
+[ 99%] Built target tjbench-static
+[100%] Linking C executable jpegtran-static
+[100%] Built target jpegtran-static
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/libturbojpeg.a
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/tjbench
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include/turbojpeg.h
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/libjpeg.a
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/cjpeg
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/djpeg
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/jpegtran
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/rdjpgcom
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/bin/wrjpgcom
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/README.ijg
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/README.md
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/example.c
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/tjexample.c
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/libjpeg.txt
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/structure.txt
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/usage.txt
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/wizard.txt
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/doc/libjpeg-turbo/LICENSE.md
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man/man1/cjpeg.1
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man/man1/djpeg.1
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man/man1/jpegtran.1
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man/man1/rdjpgcom.1
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/share/man/man1/wrjpgcom.1
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/pkgconfig/libjpeg.pc
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/pkgconfig/libturbojpeg.pc
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/cmake/libjpeg-turbo/libjpeg-turboConfig.cmake
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/cmake/libjpeg-turbo/libjpeg-turboConfigVersion.cmake
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-release.cmake
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include/jconfig.h
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include/jerror.h
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include/jmorecfg.h
+-- Installing: /Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/include/jpeglib.h
+cargo:root=/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out
+cargo:rustc-link-search=native=/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/release/build/turbojpeg-sys-b4c9f12563688f74/out/lib
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_CARGO_CFG_WINDOWS
+AARCH64_APPLE_DARWIN_CARGO_CFG_WINDOWS unset
+cargo:rerun-if-env-changed=CARGO_CFG_WINDOWS
+CARGO_CFG_WINDOWS unset
+cargo:rustc-link-lib=static=turbojpeg
+cargo:rerun-if-env-changed=AARCH64_APPLE_DARWIN_TURBOJPEG_BINDING
+AARCH64_APPLE_DARWIN_TURBOJPEG_BINDING unset
+cargo:rerun-if-env-changed=TURBOJPEG_BINDING
+TURBOJPEG_BINDING unset
+Using pregenerated bindings
+cargo:rerun-if-changed=/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/turbojpeg-sys-1.0.0/bindings.rs

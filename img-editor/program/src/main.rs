@@ -1,10 +1,9 @@
-//! A simple program to be proven inside the zkVM.
 
-// #![no_main]
-// sp1_zkvm::entrypoint!(main);
+// TODO: use turbojpeg for compression
 
 use lib::Transformation;
-use serde::{Deserialize, Serialize};
+use image::{GenericImageView, RgbaImage, ImageBuffer,imageops, Rgb, DynamicImage};
+use dither; 
 
 // EXAMPLE
 //  let params = CropParameters {
@@ -22,17 +21,43 @@ pub fn crop() {}
 
 pub fn black_and_white() {}
 
+// TODO: need to change this to also have write path
+// struct Image {
+//     buffer: [u8]
+// }
+
+// impl Image {
+//     fn crop(&self) {
+//     }
+//     fn black_and_white(&self) {
+//     }
+// }
+
 pub fn main() {
-    // read in wanted transformations each as a JSON
-    let transformations = sp1_zkvm::io::read::<Vec<Transformation>>();
-    let mut img = 1; // TODO: change to desired image
+    let transformations = sp1_zkvm::io::read::<Transformation>(); // TODO: make this Vec<Transformation> instead
+    let img_buf = sp1_zkvm::io::read::<Vec<u8>>(); 
+    let width = sp1_zkvm::io::read::<u32>();
+    let height = sp1_zkvm::io::read::<u32>();
 
-    for transformation in transformations {
-        match transformation {
-            Transformation::Crop(params) => {}
-            Transformation::BlackAndWhite() => {}
-        }
-    }
+    // let mut img = RgbaImage::new(width, height);
+    
+    // for transformation in transformations {
+    //     match transformation {
+    //         Transformation::Crop(params) => image.crop(),
+    //         Transformation::BlackAndWhite() => image.black_and_white(),
 
-    sp1_zkvm::io::write(&img); // this should be the transformedf image
+    //     }
+    // }
+
+    // basically do the image transformation here
+    // rn trying grayscale but typing weird? idk
+    let rgba = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
+    let img = rgba.into_luma8();
+
+    sp1_zkvm::io::write(&img.as_raw()); // write back as raw bytes
+
+    // let new_width = 100;
+    // let new_height = 100;
+    // sp1_zkvm::io::write(&new_width);
+    // sp1_zkvm::io::write(&new_height);
 }

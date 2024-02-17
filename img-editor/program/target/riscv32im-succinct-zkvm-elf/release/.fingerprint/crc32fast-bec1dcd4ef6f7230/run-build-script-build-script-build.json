@@ -1,0 +1,1 @@
+{"rustc":15193207150399759846,"features":"","target":0,"profile":0,"path":0,"deps":[[9160445446810185545,"build_script_build",false,5913401597661612243]],"local":[{"RerunIfChanged":{"output":"riscv32im-succinct-zkvm-elf/release/build/crc32fast-bec1dcd4ef6f7230/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
