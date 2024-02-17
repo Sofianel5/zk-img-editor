@@ -19,7 +19,7 @@ fn main() {
     let decoded_transformations: Transformation = serde_json::from_str(data).unwrap();
 
     // how we get image: https://github.com/image-rs/image/blob/master/examples/opening.rs
-    let img = image::open("src/500.png").unwrap().into_rgb8(); // Dynamic Image
+    let img = image::open("src/256.png").unwrap().into_rgb8(); // Dynamic Image
     let (width, height) = img.dimensions(); // each u32
                                             // let channel_count = match img.color() {
                                             //     image::ColorType::L8 => 1,
