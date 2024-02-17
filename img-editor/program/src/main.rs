@@ -5,6 +5,15 @@ use lib::Transformation;
 use image::{GenericImageView, RgbaImage, ImageBuffer,imageops, Rgb, DynamicImage, ImageFormat};
 use std::io::Cursor;
 
+#[no_mangle]
+extern "C" fn round(x: f32) -> f32 {
+    1.0f32
+}
+
+#[no_mangle]
+extern "C" fn roundf(x: f32) -> f32 {
+    1.0f32
+}
 // EXAMPLE
 //  let params = CropParameters {
 //     x1: 0,
