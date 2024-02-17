@@ -1,18 +1,26 @@
-
 // TODO: use turbojpeg for compression
 
+use image::{imageops, EncodableLayout, ImageBuffer, RgbImage};
 use lib::Transformation;
-use image::{GenericImageView, RgbaImage, ImageBuffer,imageops, Rgb, DynamicImage, ImageFormat};
-use std::io::Cursor;
 
 #[no_mangle]
 extern "C" fn round(x: f32) -> f32 {
-    1.0f32
+    let offset = x % 1.0f32;
+
+    if offset >= 0.5 {
+        return x + (1.0f32 - offset);
+    }
+    return x - offset;
 }
 
 #[no_mangle]
 extern "C" fn roundf(x: f32) -> f32 {
-    1.0f32
+    let offset = x % 1.0f32;
+
+    if offset >= 0.5 {
+        return x + (1.0f32 - offset);
+    }
+    return x - offset;
 }
 // EXAMPLE
 //  let params = CropParameters {
@@ -44,12 +52,12 @@ pub fn black_and_white() {}
 
 pub fn main() {
     let transformations = sp1_zkvm::io::read::<Transformation>(); // TODO: make this Vec<Transformation> instead
-    let img_buf = sp1_zkvm::io::read::<Vec<u8>>(); 
+    let img_buf = sp1_zkvm::io::read::<Vec<u8>>();
     let width = sp1_zkvm::io::read::<u32>();
     let height = sp1_zkvm::io::read::<u32>();
 
     // let mut img = RgbaImage::new(width, height);
-    
+
     // for transformation in transformations {
     //     match transformation {
     //         Transformation::Crop(params) => image.crop(),
@@ -58,16 +66,14 @@ pub fn main() {
     //     }
     // }
 
-    println!("{:?}", img_buf);
+    // println!("{:?}", img_buf);
 
-    let img = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
-    // let img = rgba.into_luma8(); 
+    let mut img: RgbImage = ImageBuffer::from_raw(width, height, img_buf).unwrap();
 
-    // let img = ImageBuffer::from_raw(width, height, img_buf).unwrap();
-    let mut buffer = Cursor::new(Vec::new());
-    img.write_to(&mut buffer, ImageFormat::Jpeg).unwrap();
+    let cropped_img = imageops::crop(&mut img, 0, 0, 100, 100).to_image();
+    let img_buffer = cropped_img.as_bytes();
 
-    sp1_zkvm::io::write(&buffer.into_inner()); // write back as raw bytes
+    sp1_zkvm::io::write(&img_buffer); // write back as raw bytes
 
     // let new_width = 100;
     // let new_height = 100;
