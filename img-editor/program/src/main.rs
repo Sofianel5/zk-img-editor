@@ -44,9 +44,7 @@ pub fn black_and_white() {}
 
 pub fn main() {
     let transformations = sp1_zkvm::io::read::<Transformation>(); // TODO: make this Vec<Transformation> instead
-    println!("here1");
     let img_buf = sp1_zkvm::io::read::<Vec<u8>>(); 
-    println!("here2");
     let width = sp1_zkvm::io::read::<u32>();
     let height = sp1_zkvm::io::read::<u32>();
 

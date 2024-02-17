@@ -35,13 +35,12 @@ fn main() {
 
     // Read transformed image.
     let transformed_img_buf = proof.stdout.read::<Vec<u8>>();
-    print!("got here2");
     // let new_width = proof.stdout.read::<u32>();
     // let new_height = proof.stdout.read::<u32>();
     
     let new_img = RgbaImage::from_raw(width, height, transformed_img_buf).unwrap();
     print!("got here3");
-    let fout = &mut File::create("./dog_cropped.png").unwrap();
+    let fout = &mut File::create("./dog_cropped.png").unwrap(); // write cropped image
     new_img.write_to(fout, ImageFormat::Jpeg).unwrap();
 
     // Verify proof.
