@@ -1,8 +1,7 @@
 // TODO: use turbojpeg for compression
 
-use image::{imageops, DynamicImage, GenericImageView, ImageBuffer, ImageFormat, Rgb, RgbaImage};
+use image::{imageops, ImageBuffer, RgbImage};
 use lib::Transformation;
-use std::io::Cursor;
 
 #[no_mangle]
 extern "C" fn round(x: f32) -> f32 {
@@ -12,7 +11,12 @@ extern "C" fn round(x: f32) -> f32 {
 
 #[no_mangle]
 extern "C" fn roundf(x: f32) -> f32 {
-    1.0f32
+    let offset = x % 1.0f32;
+
+    if offset >= 0.5 {
+        return x + (1.0f32 - offset);
+    }
+    return x - offset;
 }
 // EXAMPLE
 //  let params = CropParameters {
@@ -59,22 +63,21 @@ pub fn main() {
     // }
 
     // println!("{:?}", img_buf);
+
     println!("Before reading image");
     println!("width: {:?}", width);
     println!("height: {:?}", height);
     println!("img_buf.len(): {:?}", img_buf.len());
-    let img = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
+    let mut img: RgbImage = ImageBuffer::from_raw(width, height, img_buf).unwrap();
     println!("Finished reading image");
-    // let img = rgba.into_luma8();
 
-    // let img = ImageBuffer::from_raw(width, height, img_buf).unwrap();
-    let mut buffer = Cursor::new(Vec::new());
-    img.write_to(&mut buffer, ImageFormat::Jpeg).unwrap();
+    let cropped_img = imageops::crop(&mut img, 0, 0, 100, 50).to_image();
+    let img_buffer = cropped_img.as_raw();
 
-    sp1_zkvm::io::write(&buffer.into_inner()); // write back as raw bytes
+    sp1_zkvm::io::write(&img_buffer); // write back as raw bytes
 
-    // let new_width = 100;
-    // let new_height = 100;
-    // sp1_zkvm::io::write(&new_width);
-    // sp1_zkvm::io::write(&new_height);
+    let new_width = 100;
+    let new_height = 50;
+    sp1_zkvm::io::write(&new_width);
+    sp1_zkvm::io::write(&new_height);
 }
