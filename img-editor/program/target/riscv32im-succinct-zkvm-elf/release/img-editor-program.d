@@ -1,1 +1,1 @@
-/Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/img-editor-program: /Users/kayleegeorge/code/attested-img-editor/img-editor/program/src/main.rs
+/Users/kayleegeorge/code/attested-img-editor/img-editor/program/target/riscv32im-succinct-zkvm-elf/release/img-editor-program: /Users/kayleegeorge/code/attested-img-editor/img-editor/lib/src/lib.rs /Users/kayleegeorge/code/attested-img-editor/img-editor/program/src/main.rs

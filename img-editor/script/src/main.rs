@@ -2,8 +2,9 @@
 
 use lib::Transformation;
 use sp1_core::{SP1Prover, SP1Stdin, SP1Verifier};
-use image::{GenericImageView, RgbaImage, ImageFormat};
+use image::{GenericImageView, DynamicImage, ImageFormat, RgbaImage};
 use std::fs::File;
+use std::io::Cursor;
 
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
 
@@ -12,19 +13,18 @@ fn main() {
     let mut stdin = SP1Stdin::new();
 
     // TODO: make this an array of transformations 
-    let data = include_str!("./transformations.json");
-    print!("{}", data);
-
+    let data = include_str!("./transformations.json"); // this is a macro and finds path
     let decoded_transformations: Transformation = serde_json::from_str(data).unwrap(); 
-    print!("{}", serde_json::to_string(&decoded_transformations).unwrap());
 
     // how we get image: https://github.com/image-rs/image/blob/master/examples/opening.rs
-    let img = image::open("./dog.jpg").unwrap(); // not working??????????
+    let img = image::open("src/dog.jpg").unwrap(); // Dynamic Image
     let (width, height) = img.dimensions(); // each u32
-    print!("{}", width);
+
+    let mut buffer = Cursor::new(Vec::new());
+    img.write_to(&mut buffer, ImageFormat::Jpeg).unwrap();
 
     // Write data.
-    stdin.write(&img.as_bytes()); 
+    stdin.write(&buffer.into_inner()); 
     stdin.write(&decoded_transformations);  // TODO: make this "vec![decoded_transformations]" 
     stdin.write(&width); 
     stdin.write(&height);
@@ -33,11 +33,13 @@ fn main() {
 
     // Read transformed image.
     let transformed_img_buf = proof.stdout.read::<Vec<u8>>();
+    print!("got here2");
     // let new_width = proof.stdout.read::<u32>();
     // let new_height = proof.stdout.read::<u32>();
     
     let new_img = RgbaImage::from_raw(width, height, transformed_img_buf).unwrap();
-    let fout = &mut File::create("./cat_cropped.png").unwrap();
+    print!("got here3");
+    let fout = &mut File::create("./dog_cropped.png").unwrap();
     new_img.write_to(fout, ImageFormat::Jpeg).unwrap();
 
     // Verify proof.

@@ -2,8 +2,8 @@
 // TODO: use turbojpeg for compression
 
 use lib::Transformation;
-use image::{GenericImageView, RgbaImage, ImageBuffer,imageops, Rgb, DynamicImage};
-use dither; 
+use image::{GenericImageView, RgbaImage, ImageBuffer,imageops, Rgb, DynamicImage, ImageFormat};
+use std::io::Cursor;
 
 // EXAMPLE
 //  let params = CropParameters {
@@ -49,12 +49,14 @@ pub fn main() {
     //     }
     // }
 
-    // basically do the image transformation here
-    // rn trying grayscale but typing weird? idk
-    let rgba = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
-    let img = rgba.into_luma8();
+    let img = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
+    // let img = rgba.into_luma8(); // DOESNT WORK BC USES ROUND
 
-    sp1_zkvm::io::write(&img.as_raw()); // write back as raw bytes
+    // let img = ImageBuffer::from_raw(width, height, img_buf).unwrap();
+    let mut buffer = Cursor::new(Vec::new());
+    img.write_to(&mut buffer, ImageFormat::Jpeg).unwrap();
+
+    sp1_zkvm::io::write(&buffer.into_inner()); // write back as raw bytes
 
     // let new_width = 100;
     // let new_height = 100;
