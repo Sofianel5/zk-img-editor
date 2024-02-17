@@ -18,7 +18,7 @@ fn main() {
     let decoded_transformations: Transformation = serde_json::from_str(data).unwrap();
 
     // how we get image: https://github.com/image-rs/image/blob/master/examples/opening.rs
-    let img = image::open("./src/dog.jpg").unwrap(); // 128 x 84
+    let img = image::open("./src/256.png").unwrap(); // 128 x 84
     let (width, height) = img.dimensions();
     let img_buffer = img.into_bytes();
 
