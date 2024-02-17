@@ -1,0 +1,11 @@
+/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/debug/deps/libsec1-f54d7d514d186e43.rmeta: /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/lib.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/point.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/error.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/parameters.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/private_key.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/traits.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/../README.md
+
+/Users/kayleegeorge/code/attested-img-editor/img-editor/script/target/debug/deps/sec1-f54d7d514d186e43.d: /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/lib.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/point.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/error.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/parameters.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/private_key.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/traits.rs /Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/../README.md
+
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/lib.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/point.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/error.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/parameters.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/private_key.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/traits.rs:
+/Users/kayleegeorge/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sec1-0.7.3/src/../README.md:

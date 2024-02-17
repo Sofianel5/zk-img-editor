@@ -5,4 +5,5 @@ name = "img-editor-script"
 edition = "2021"
 
 [dependencies]
+serde_json = "1.0.113"
 sp1-core = { git = "https://github.com/succinctlabs/sp1.git" }

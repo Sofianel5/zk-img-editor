@@ -7,9 +7,10 @@ const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf
 fn main() {
     // Generate proof.
     let mut stdin = SP1Stdin::new();
-    let t = {'transformation': 'crop', 'params': [3, 4, 10, 10]};
-    
-    serde
+
+    let data = include_str!("./transformations.json");
+    let decoded = serde_json::from_str(data).unwrap();
+
     stdin.write(&n);
     let mut proof = SP1Prover::prove(ELF, stdin).expect("proving failed");
 

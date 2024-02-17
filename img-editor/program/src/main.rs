@@ -3,21 +3,8 @@
 // #![no_main]
 // sp1_zkvm::entrypoint!(main);
 
+use lib::Transformation;
 use serde::{Deserialize, Serialize};
-
-#[derive(Serialize, Deserialize, Debug)]
-struct CropParameters {
-    x1: usize,
-    y1: usize,
-    x2: usize,
-    y2: usize,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-enum Transformation {
-    Crop(CropParameters),
-    BlackAndWhite(),
-}
 
 // EXAMPLE
 //  let params = CropParameters {

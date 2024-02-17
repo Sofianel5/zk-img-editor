@@ -20,6 +20,7 @@
     ],
     "rust-analyzer.linkedProjects": [
         "img-editor/program/Cargo.toml",
+        "img-editor/script/Cargo.toml",
     ],
     "rust-analyzer.showUnlinkedFileNotification": false
 }

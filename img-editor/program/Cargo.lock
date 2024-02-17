@@ -212,6 +212,7 @@ dependencies = [
 name = "img-editor-program"
 version = "0.1.0"
 dependencies = [
+ "lib",
  "serde",
  "serde_json",
  "sp1-zkvm",
@@ -235,6 +236,13 @@ dependencies = [
  "once_cell",
  "sha2",
  "signature",
+]
+
+[[package]]
+name = "lib"
+version = "0.1.0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
