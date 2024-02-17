@@ -2,6 +2,7 @@
 
 use lib::Transformation;
 use sp1_core::{SP1Prover, SP1Stdin, SP1Verifier};
+use sp1_core::utils;
 use image::{GenericImageView, DynamicImage, ImageFormat, RgbaImage};
 use std::fs::File;
 use std::io::Cursor;
@@ -9,6 +10,7 @@ use std::io::Cursor;
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
 
 fn main() {
+    utils::setup_logger();
     // Generate proof.
     let mut stdin = SP1Stdin::new();
 
@@ -24,8 +26,8 @@ fn main() {
     img.write_to(&mut buffer, ImageFormat::Jpeg).unwrap();
 
     // Write data.
-    stdin.write(&buffer.into_inner()); 
     stdin.write(&decoded_transformations);  // TODO: make this "vec![decoded_transformations]" 
+    stdin.write(&buffer.into_inner()); 
     stdin.write(&width); 
     stdin.write(&height);
 

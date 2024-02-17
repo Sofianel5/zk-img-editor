@@ -44,7 +44,9 @@ pub fn black_and_white() {}
 
 pub fn main() {
     let transformations = sp1_zkvm::io::read::<Transformation>(); // TODO: make this Vec<Transformation> instead
+    println!("here1");
     let img_buf = sp1_zkvm::io::read::<Vec<u8>>(); 
+    println!("here2");
     let width = sp1_zkvm::io::read::<u32>();
     let height = sp1_zkvm::io::read::<u32>();
 
@@ -58,8 +60,10 @@ pub fn main() {
     //     }
     // }
 
+    println!("{:?}", img_buf);
+
     let img = DynamicImage::ImageRgba8(ImageBuffer::from_raw(width, height, img_buf).unwrap());
-    // let img = rgba.into_luma8(); // DOESNT WORK BC USES ROUND
+    // let img = rgba.into_luma8(); 
 
     // let img = ImageBuffer::from_raw(width, height, img_buf).unwrap();
     let mut buffer = Cursor::new(Vec::new());
