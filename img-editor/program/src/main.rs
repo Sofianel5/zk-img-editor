@@ -72,6 +72,7 @@ pub fn main() {
     println!("Finished reading image");
 
     let cropped_img = imageops::crop(&mut img, 0, 0, 100, 50).to_image();
+
     let img_buffer = cropped_img.as_raw();
 
     sp1_zkvm::io::write(&img_buffer); // write back as raw bytes
