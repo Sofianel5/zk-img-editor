@@ -13,6 +13,8 @@ Foundry consists of:
 
 https://book.getfoundry.sh/
 
+https://docs.caldera.xyz/deploying-contracts/foundry
+
 ## Usage
 
 ### Build
