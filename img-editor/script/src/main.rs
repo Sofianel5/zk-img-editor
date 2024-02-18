@@ -6,8 +6,24 @@ use lib::Transformation;
 use sp1_core::utils;
 use sp1_core::{SP1Prover, SP1Stdin, SP1Verifier};
 use std::fs::File;
+use std::{
+    io::{prelude::*, BufReader},
+    net::{TcpListener, TcpStream},
+};
+
 
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
+
+fn handle_connection(mut stream: TcpStream) {
+    let buf_reader = BufReader::new(&mut stream);
+    let http_request: Vec<_> = buf_reader
+        .lines()
+        .map(|result| result.unwrap())
+        .take_while(|line| !line.is_empty())
+        .collect();
+
+    println!("Request: {:#?}", http_request);
+}
 
 fn main() {
     utils::setup_logger();
@@ -64,5 +80,14 @@ fn main() {
         .save("proof-with-io.json")
         .expect("saving proof failed");
 
-    println!("succesfully generated and verified proof for the program!")
+    println!("succesfully generated and verified proof for the program!");
+
+    println!("Now running server to listen for incoming connections...");
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
+
+    for stream in listener.incoming() {
+        let stream = stream.unwrap();
+
+        handle_connection(stream);
+    }
 }
