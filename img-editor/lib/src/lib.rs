@@ -11,7 +11,23 @@ pub struct CropParameters {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct BlurParameters {
+    pub sigma: f32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct BrightenParameters {
+    pub value: i32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub enum Transformation {
     Crop(CropParameters),
     Grayscale(),
+    Rotate90(),
+    Rotate180(),
+    Rotate270(),
+    FlipVertical(),
+    FlipHorizontal(),
+    Brighten(BrightenParameters),
 }

@@ -69,6 +69,24 @@ pub fn main() {
                 )
                 .unwrap();
             }
+            Transformation::Rotate90() => {
+                transformed_img = imageops::rotate90(&transformed_img);
+            }
+            Transformation::Rotate180() => {
+                transformed_img = imageops::rotate180(&transformed_img);
+            }
+            Transformation::Rotate270() => {
+                transformed_img = imageops::rotate270(&transformed_img);
+            }
+            Transformation::FlipVertical() => {
+                transformed_img = imageops::flip_vertical(&transformed_img);
+            }
+            Transformation::FlipHorizontal() => {
+                transformed_img = imageops::flip_horizontal(&transformed_img);
+            }
+            Transformation::Brighten(params) => {
+                transformed_img = imageops::brighten(&transformed_img, params.value)
+            }
         };
     }
     let img_buffer = transformed_img.as_raw();
@@ -78,14 +96,3 @@ pub fn main() {
     sp1_zkvm::io::write(&new_width);
     sp1_zkvm::io::write(&new_height);
 }
-
-/*
-FUTURE ROADMAP: support list of transformations
-
-    for transformation in transformations {
-        match transformation {
-            Transformation::Crop(params) => image.crop(),
-            Transformation::BlackAndWhite() => image.black_and_white(),
-        }
-    }
-*/
