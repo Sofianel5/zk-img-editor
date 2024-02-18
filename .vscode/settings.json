@@ -24,5 +24,6 @@
     ],
     "rust-analyzer.showUnlinkedFileNotification": false,
     "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
-    "is_builtin": false
+    "is_builtin": false,
+    "solidity.defaultCompiler": "localNodeModule"
 }
