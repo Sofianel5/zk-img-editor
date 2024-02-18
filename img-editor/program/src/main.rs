@@ -40,27 +40,38 @@ pub fn main() {
     println!("width: {:?}", old_width);
     println!("height: {:?}", old_height);
     println!("img_buf.len(): {:?}", img_buf.len());
-    let mut img: RgbImage = ImageBuffer::from_raw(old_width, old_height, img_buf).unwrap();
+    let img: RgbImage = ImageBuffer::from_raw(old_width, old_height, img_buf).unwrap();
     println!("Finished reading image");
 
     let mut new_width = old_width;
     let mut new_height = old_height;
 
-    let mut transformed_img = None;
+    let mut transformed_img = img;
     for transformation in transformations {
         match transformation {
             Transformation::Crop(params) => {
                 new_width = params.width;
                 new_height = params.height;
-                transformed_img = Some(
-                    imageops::crop(&mut img, params.x, params.y, new_width, new_height).to_image(),
-                );
+                transformed_img = imageops::crop(
+                    &mut transformed_img,
+                    params.x,
+                    params.y,
+                    new_width,
+                    new_height,
+                )
+                .to_image();
+            }
+            Transformation::Grayscale() => {
+                transformed_img = RgbImage::from_raw(
+                    new_width,
+                    new_height,
+                    imageops::grayscale(&transformed_img).as_raw().to_vec(),
+                )
+                .unwrap();
             }
         };
     }
-
-    let i = transformed_img.unwrap();
-    let img_buffer = i.as_raw();
+    let img_buffer = transformed_img.as_raw();
 
     // Write back cropped image.
     sp1_zkvm::io::write(&img_buffer);
