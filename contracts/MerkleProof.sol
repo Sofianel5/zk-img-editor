@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-contract MerkleProofExample {
+contract MerkleProof {
     function verifyData(
         bytes32[] memory proof,
         bytes32 root,
