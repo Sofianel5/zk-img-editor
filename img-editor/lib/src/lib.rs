@@ -13,4 +13,5 @@ pub struct CropParameters {
 #[derive(Serialize, Deserialize, Debug)]
 pub enum Transformation {
     Crop(CropParameters),
+    Grayscale(),
 }

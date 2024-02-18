@@ -29,7 +29,7 @@ fn main() {
     let ecdsa_signature: Vec<u8> = hex!("46557EFE96D22D07E104D9D7FAB558FB02F6B13116056E6D7C300D7BB132059907D538EAC68EC7864AA2AC2E23EA7082A04002B0ACDAC2FF8CCAD7E80E64DD00").to_vec();
 
     // Write data.
-    stdin.write(&decoded_transformations); // TODO: vector of transformations: vec![decoded_transformations]
+    stdin.write(&decoded_transformations);
     stdin.write(&img_buffer);
     stdin.write(&width);
     stdin.write(&height);
