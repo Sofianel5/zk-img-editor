@@ -5,6 +5,8 @@ use sp1_core::utils;
 use sp1_core::{SP1Prover, SP1Stdin, SP1Verifier};
 use std::fs::File;
 
+const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
+
 fn main() {
     utils::setup_logger();
     // Generate proof.
