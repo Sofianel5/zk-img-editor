@@ -1,57 +1,30 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
-contract MerkleProof {
-    function verify(
+contract MerkleProofExample {
+    function verifyData(
         bytes32[] memory proof,
         bytes32 root,
-        bytes32 leaf,
-        uint index
+        bytes32 leaf
     ) public pure returns (bool) {
-        bytes32 hash = leaf;
-
-        for (uint i = 0; i < proof.length; i++) {
-            bytes32 proofElement = proof[i];
-
-            if (index % 2 == 0) {
-                hash = keccak256(abi.encodePacked(hash, proofElement));
-            } else {
-                hash = keccak256(abi.encodePacked(proofElement, hash));
-            }
-
-            index = index / 2;
-        }
-
-        return hash == root;
-    }
-}
-
-contract TestMerkleProof is MerkleProof {
-    bytes32[] public hashes;
-
-    constructor(public_keys) {
-
-        for (uint i = 0; i < public_keys.length; i++) {
-            hashes.push(keccak256(abi.encodePacked(public_keys[i])));
-        }
-
-        uint n = public_keys.length;
-        uint offset = 0;
-
-        while (n > 0) {
-            for (uint i = 0; i < n - 1; i += 2) {
-                hashes.push(
-                    keccak256(
-                        abi.encodePacked(hashes[offset + i], hashes[offset + i + 1])
-                    )
-                );
-            }
-            offset += n;
-            n = n / 2;
-        }
+        return processProof(proof, leaf) == root;
     }
 
-    function getRoot() public view returns (bytes32) {
-        return hashes[hashes.length - 1];
+    function processProof(bytes32[] memory proof, bytes32 leaf)
+        internal
+        pure
+        returns (bytes32)
+    {
+        bytes32 computedHash = leaf;
+        for (uint256 i = 0; i < proof.length; i++) {
+            computedHash = _hashPair(computedHash, proof[i]);
+        }
+        return computedHash;
+    }
+
+    // From: https://mirror.xyz/haruxe.eth/Gg7UG4hctOHyteVeRX7w1Ac9m1gAoCs8uuiWx3WwVz4
+    function _hashPair(bytes32 a, bytes32 b) private pure returns (bytes32) {
+        return a < b ? keccak256(abi.encodePacked(a, b)) : 
+                       keccak256(abi.encodePacked(b, a));
     }
 }
