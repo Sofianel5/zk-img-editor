@@ -17,7 +17,7 @@ fn main() {
     let decoded_transformations: Vec<Transformation> = serde_json::from_str(data).unwrap();
 
     // image
-    let img = image::open("./src/500.png").unwrap();
+    let img = image::open("./src/256.png").unwrap();
     let (width, height) = img.dimensions();
     let img_buffer = img.into_bytes();
 
