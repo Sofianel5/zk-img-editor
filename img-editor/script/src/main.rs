@@ -77,10 +77,12 @@ fn prove(proof_request: Form<ProofRequest<'_>>) -> String {
 
 #[rocket::main]
 async fn main() -> Result<(), rocket::Error> {
+    let working_path = std::env::current_dir().unwrap();
+
     let _rocket = rocket::build()
-        .configure(rocket::Config::figment().merge(("port", 9999)))
+        .configure(rocket::Config::figment().merge(("port", 9999)).merge(("address", "0.0.0.0")))
         .mount("/", routes![prove])
-        .mount("/proofs", FileServer::from("proofs/"))
+        .mount("/proofs", FileServer::from(format!("{}/proofs", working_path.display())))
         .launch()
         .await?;
 
