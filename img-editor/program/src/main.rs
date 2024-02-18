@@ -87,6 +87,9 @@ pub fn main() {
             Transformation::Brighten(params) => {
                 transformed_img = imageops::brighten(&transformed_img, params.value)
             }
+            Transformation::Constrast(params) => {
+                transformed_img = imageops::contrast(&transformed_img, params.contrast);
+            }
         };
     }
     let img_buffer = transformed_img.as_raw();

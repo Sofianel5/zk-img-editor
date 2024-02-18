@@ -21,6 +21,11 @@ pub struct BrightenParameters {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct ContrastParameters {
+    pub contrast: f32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub enum Transformation {
     Crop(CropParameters),
     Grayscale(),
@@ -30,4 +35,5 @@ pub enum Transformation {
     FlipVertical(),
     FlipHorizontal(),
     Brighten(BrightenParameters),
+    Constrast(ContrastParameters),
 }
