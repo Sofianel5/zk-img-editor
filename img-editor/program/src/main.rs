@@ -21,7 +21,7 @@ extern "C" fn roundf(x: f32) -> f32 {
 }
 
 pub fn main() {
-    let transformation = sp1_zkvm::io::read::<Transformation>();
+    let transformations = sp1_zkvm::io::read::<Vec<Transformation>>();
     let img_buf = sp1_zkvm::io::read::<Vec<u8>>();
     let old_width = sp1_zkvm::io::read::<u32>();
     let old_height = sp1_zkvm::io::read::<u32>();
@@ -46,17 +46,21 @@ pub fn main() {
     let mut new_width = old_width;
     let mut new_height = old_height;
 
-    let cropped_img;
+    let mut transformed_img = None;
+    for transformation in transformations {
+        match transformation {
+            Transformation::Crop(params) => {
+                new_width = params.width;
+                new_height = params.height;
+                transformed_img = Some(
+                    imageops::crop(&mut img, params.x, params.y, new_width, new_height).to_image(),
+                );
+            }
+        };
+    }
 
-    match transformation {
-        Transformation::Crop(params) => {
-            new_width = params.width;
-            new_height = params.height;
-            cropped_img =
-                imageops::crop(&mut img, params.x, params.y, new_width, new_height).to_image();
-        }
-    };
-    let img_buffer = cropped_img.as_raw();
+    let i = transformed_img.unwrap();
+    let img_buffer = i.as_raw();
 
     // Write back cropped image.
     sp1_zkvm::io::write(&img_buffer);

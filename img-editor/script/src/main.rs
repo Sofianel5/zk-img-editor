@@ -16,7 +16,7 @@ fn main() {
 
     // transformation
     let data = include_str!("./transformations.json");
-    let decoded_transformations: Transformation = serde_json::from_str(data).unwrap();
+    let decoded_transformations: Vec<Transformation> = serde_json::from_str(data).unwrap();
 
     // image
     let img = image::open("./src/256.png").unwrap();
