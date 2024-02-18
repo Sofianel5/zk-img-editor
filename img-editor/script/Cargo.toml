@@ -9,3 +9,6 @@ image = "0.24.8"
 serde_json = "1.0.113"
 sp1-core = { git = "https://github.com/succinctlabs/sp1.git" }
 lib = { path = "../lib" }
+ecdsa = "0.16.9"
+hex-literal = "0.4.1"
+p256 = "0.13.2"

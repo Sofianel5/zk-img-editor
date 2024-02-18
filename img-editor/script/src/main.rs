@@ -1,5 +1,6 @@
 //! A simple script to generate and verify the proof of a given program.
 
+use hex_literal::hex;
 use image::{GenericImageView, ImageFormat, RgbImage};
 use lib::Transformation;
 use sp1_core::utils;
@@ -13,20 +14,28 @@ fn main() {
     // Generate proof.
     let mut stdin = SP1Stdin::new();
 
-    // TODO: make this an array of transformations
-    let data = include_str!("./transformations.json"); // this is a macro and finds path
+    // transformation
+    let data = include_str!("./transformations.json");
     let decoded_transformations: Transformation = serde_json::from_str(data).unwrap();
 
-    // how we get image: https://github.com/image-rs/image/blob/master/examples/opening.rs
-    let img = image::open("./src/500.png").unwrap(); // 128 x 84
+    // image
+    let img = image::open("./src/256.png").unwrap();
     let (width, height) = img.dimensions();
     let img_buffer = img.into_bytes();
 
+    // signature (TODO: replace dummy values)
+    // reference: https://docs.rs/p256/latest/p256/ecdsa/index.html
+    let signing_key = hex!("ec172b93ad5e563bf4932c70e1245034c35467ef2efd4d64ebf819683467e2bf");
+    let ecdsa_signature: Vec<u8> = hex!("46557EFE96D22D07E104D9D7FAB558FB02F6B13116056E6D7C300D7BB132059907D538EAC68EC7864AA2AC2E23EA7082A04002B0ACDAC2FF8CCAD7E80E64DD00").to_vec();
+
     // Write data.
-    stdin.write(&decoded_transformations); // TODO: make this "vec![decoded_transformations]"
+    stdin.write(&decoded_transformations); // TODO: vector of transformations: vec![decoded_transformations]
     stdin.write(&img_buffer);
     stdin.write(&width);
     stdin.write(&height);
+
+    stdin.write(&signing_key);
+    stdin.write(&ecdsa_signature);
 
     let mut proof = SP1Prover::prove(ELF, stdin).expect("proving failed");
 
@@ -35,12 +44,16 @@ fn main() {
     let new_width = proof.stdout.read::<u32>();
     let new_height = proof.stdout.read::<u32>();
 
-    println!("transformed_img_bug.len() = {:?}", transformed_img_buf.len());
+    println!(
+        "transformed_img_bug.len() = {:?}",
+        transformed_img_buf.len()
+    );
     println!("new_width = {:?}", new_width);
     println!("new_height = {:?}", new_height);
 
+    // Save transformed image.
     let new_img = RgbImage::from_raw(new_width, new_height, transformed_img_buf).unwrap();
-    let fout = &mut File::create("./src/dog_cropped.jpg").unwrap(); // write cropped image
+    let fout = &mut File::create("./src/edited_img.jpg").unwrap();
     new_img.write_to(fout, ImageFormat::Jpeg).unwrap();
 
     // Verify proof.

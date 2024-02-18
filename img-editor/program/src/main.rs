@@ -2,6 +2,7 @@
 
 use image::{imageops, ImageBuffer, RgbImage};
 use lib::Transformation;
+use p256::ecdsa::{signature::Verifier, VerifyingKey};
 
 #[no_mangle]
 extern "C" fn round(x: f32) -> f32 {
@@ -18,52 +19,17 @@ extern "C" fn roundf(x: f32) -> f32 {
     }
     return x - offset;
 }
-// EXAMPLE
-//  let params = CropParameters {
-//     x1: 0,
-//     y1: 1,
-//     x2: 3,
-//     y2: 3,
-// };
-// let t = Transformation::Crop(params);
-// let res = serde_json::to_string(&t).unwrap();
-// res = {"Crop":{"x1":0,"y1":1,"x2":3,"y2":3}}
-
-/* Crops the image */
-pub fn crop() {}
-
-pub fn black_and_white() {}
-
-// TODO: need to change this to also have write path
-// struct Image {
-//     buffer: [u8]
-// }
-
-// impl Image {
-//     fn crop(&self) {
-//     }
-//     fn black_and_white(&self) {
-//     }
-// }
 
 pub fn main() {
-    let transformations = sp1_zkvm::io::read::<Transformation>(); // TODO: make this Vec<Transformation> instead
+    let transformation = sp1_zkvm::io::read::<Transformation>();
     let img_buf = sp1_zkvm::io::read::<Vec<u8>>();
     let width = sp1_zkvm::io::read::<u32>();
     let height = sp1_zkvm::io::read::<u32>();
 
-    // let mut img = RgbaImage::new(width, height);
+    let signing_key = sp1_zkvm::io::read::<Vec<u8>>(); // serialized
+    let signature = sp1_zkvm::io::read::<Vec<u8>>(); // signature
 
-    // for transformation in transformations {
-    //     match transformation {
-    //         Transformation::Crop(params) => image.crop(),
-    //         Transformation::BlackAndWhite() => image.black_and_white(),
-
-    //     }
-    // }
-
-    // println!("{:?}", img_buf);
-
+    // crop image
     println!("Before reading image");
     println!("width: {:?}", width);
     println!("height: {:?}", height);
@@ -71,14 +37,31 @@ pub fn main() {
     let mut img: RgbImage = ImageBuffer::from_raw(width, height, img_buf).unwrap();
     println!("Finished reading image");
 
-    let cropped_img = imageops::crop(&mut img, 0, 0, 100, 50).to_image();
-
-    let img_buffer = cropped_img.as_raw();
-
-    sp1_zkvm::io::write(&img_buffer); // write back as raw bytes
-
     let new_width = 100;
     let new_height = 50;
+
+    let cropped_img = imageops::crop(&mut img, 0, 0, new_wdith, new_height).to_image();
+    let img_buffer = cropped_img.as_raw();
+
+    // Verify signature.
+    let verifying_key = VerifyingKey::from(&signing_key);
+    let sig_verified = verifying_key.verify(message, &signature).is_ok();
+
+    // Write back cropped image.
+    sp1_zkvm::io::write(&img_buffer);
     sp1_zkvm::io::write(&new_width);
     sp1_zkvm::io::write(&new_height);
+
+    //
 }
+
+/*
+FUTURE ROADMAP: support list of transformations
+
+    for transformation in transformations {
+        match transformation {
+            Transformation::Crop(params) => image.crop(),
+            Transformation::BlackAndWhite() => image.black_and_white(),
+        }
+    }
+*/

@@ -6,8 +6,8 @@ use serde::{Deserialize, Serialize};
 pub struct CropParameters {
     x1: usize,
     y1: usize,
-    x2: usize,
-    y2: usize,
+    width: usize,
+    height: usize,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -15,5 +15,3 @@ pub enum Transformation {
     Crop(CropParameters),
     BlackAndWhite(),
 }
-
-
